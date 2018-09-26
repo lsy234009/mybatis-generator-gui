@@ -1,11 +1,13 @@
 package com.zzg.mybatis.generator.model;
 
+import sun.tools.jar.resources.jar;
+
 /**
  * Created by Owen on 6/14/16.
  */
 public enum DbType {
 
-    MySQL("com.mysql.jdbc.Driver", "jdbc:mysql://%s:%s/%s?useUnicode=true&useSSL=false&characterEncoding=%s", "mysql-connector-java-5.1.38.jar"),
+    MySQL("com.mysql.jdbc.Driver", "jdbc:mysql://%s:%s/%s?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=%s&amp;cachePrepStmts=true&amp;useServerPrepStmts=true&amp;prepStmtCacheSize=250&amp;prepStmtCacheSqlLimit=2048", "mysql-connector-java-5.1.38.jar"),
     Oracle("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@%s:%s:%s", "ojdbc14.jar"),
     PostgreSQL("org.postgresql.Driver", "jdbc:postgresql://%s:%s/%s", "postgresql-9.4.1209.jar"),
 	SQL_Server("com.microsoft.sqlserver.jdbc.SQLServerDriver", "jdbc:sqlserver://%s:%s;databaseName=%s", "sqljdbc4-4.0.jar"),
